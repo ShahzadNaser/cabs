@@ -1,0 +1,13 @@
+<?php include('includes/head.php');?>
+<!--header top-->
+<?php include('includes/header-top.php');?>
+<!--main header-->
+<?php include('includes/header.php');?>
+	<?php include('includes/home_banner.php');?>
+	<?php include('includes/fact.php');?>
+	<?php include('includes/gallary.php');?>	
+	<?php include('includes/about_section.php');?>	
+	<?php include('includes/services.php');?>
+	<?php include('includes/testimonials.php');?>
+<?php include('includes/footer.php');?>
+<?php include('includes/foot.php');?>

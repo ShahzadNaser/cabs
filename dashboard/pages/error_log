@@ -1,0 +1,1 @@
+[05-Aug-2019 12:30:11 America/New_York] PHP Fatal error:  Call to undefined function get_record() in /home/hiddybli/test.hiddenlogics.com/cabs/dashboard/pages/fixedtrips.php on line 51

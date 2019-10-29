@@ -1,0 +1,377 @@
+
+
+.booking_form .fa {
+    color: #8bc34a;
+ }
+ 
+ @media (max-width: 768px) {
+    .booking_form {
+       padding: 20px !important;
+    }
+    .car {
+       text-align: center;
+    }
+ }
+ 
+ .input-group-addon {
+    background-color: white;
+    border-right: 0 !important;
+    font-size: 24px !important;
+ }
+ 
+ .input-group-addon,
+ .form-control {
+    border-radius: 0 !important;
+ }
+ 
+ .multides {
+    margin-bottom: 20px;
+ }
+ 
+ .form-control {
+    box-shadow: none !important;
+    height: 45px !important;
+ }
+ 
+ .booking_form .form-control {
+    border: 0px;
+ }
+ 
+ .booking_form .labels {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #c1ba97;
+    padding: 6px 12px;
+ }
+ 
+ .labels {
+    background: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #c1ba97;
+    padding: 6px 12px;
+ }
+ 
+ #addmulti {
+    background: #8bc34a;
+    color: #fff;
+    border-radius: 50%;
+    border: 0px;
+    box-shadow: 0px 0px 10px #ddd;
+    font-weight: normal;
+ }
+ 
+ #addmulti span {
+    font-size: 12px;
+    color: #fff;
+ }
+ 
+ .car {
+    background: white;
+    margin: 10px 0px;
+    box-shadow: 0px 2px 5px #ddd;
+    transition: all 500ms ease;
+    transform: scale(1.0);
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+ }
+ 
+ .car:hover {
+    box-shadow: 0px 0px 5px #ddd;
+    /*transform: scale(1.04);*/
+ }
+ 
+ .car-img {
+    
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    padding: 25px 0px 25px 0px;
+    filter: invert(20%) grayscale(0%);
+    display: block;
+    margin: auto;
+    transition: all 500ms ease;
+ }
+ .car:hover .car-img {
+    filter: invert(0%) grayscale(0%);
+ }
+ .car-desc {
+    padding: 10px;
+ }
+ .car-desc h3 {
+    text-transform: capitalize;
+     margin-top: 9px;
+     font-size: 20px;
+ }
+.car.active .car-desc:after {
+    content: "\f00c";
+    font-family: fontawesome;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid #8BC34A;
+    text-align: center;
+    line-height: 30px;
+    color: #8bc34a;
+    margin-top: -15px;
+    margin-right: -15px;
+    background: #fff;
+    border-radius: 100%;
+}
+ .cap-con {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 10px;
+ }
+ 
+ .capacity {
+    margin-left: 10px;
+    background: #8bc34a;
+    border-radius: 4px;
+    display: inline;
+    font-size: 12px;
+    padding: 7px 7px 7px 4px;
+    color: #fff;
+ }
+ 
+ .capacity .fa {
+    color: #fff !important;
+ }
+ 
+ .car-desc p {
+    color: #979797;
+    min-height:100px;
+ }
+ 
+ .inline-block {
+    display: inline-block !important;
+ }
+ .summarymodal #myModal{
+     background:#00000094;
+ }
+ .summarymodal .modal-dialog{
+     max-width: 490px;
+     border-radius:38px;
+ }
+ 
+ .summarymodal .close{
+     opacity:unset !important;
+    FONT-SIZE: 21PX;
+    background: #65942d;
+    color: #fff;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 30px;
+    HEIGHT: 30PX;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 50%;
+}
+
+ 
+ .summarymodal .modal-header{
+     color:#fff;
+    padding: 20px 15px;
+ }
+ #modal-summary h3 {
+     padding-left:35px;
+    position:relative;
+    font-weight: bold;
+    font-size: 18px !important;
+    margin: 0 !IMPORTANT;
+    margin-bottom: 10px !IMPORTANT;
+    display: inline-block;
+ }
+ 
+@media only screen and (max-width: 786px){
+        .summarymodal span {
+        font-size: 16px !important;
+    }
+    .summary span.fa {
+        width: 25px !important;
+    }
+    #modal-summary h3 {
+        font-size: 17px !important;
+    }
+}
+
+ #modal-summary h3:before {
+        margin-right: 10px;
+}
+ .summarymodal .modal-footer,
+ .summarymodal .modal-body,
+ .summarymodal .payment_card{
+    color: #000;
+    background: #fff;
+    position: relative;
+    padding: 15px;
+    border: 0;
+ }
+ .summarymodal .modal-header h2 ,.summarymodal .modal-header img{
+     display: inline-block;
+ }
+ .summarymodal .modal-header img{
+    
+     width: 50px;
+ }
+ .summary {
+    margin-bottom: 10px;
+    position: relative;
+}
+ .summary span.fa{
+      width: 40px;
+      position:absolute;
+      text-align: center;
+ }
+    
+ .summarymodal span{
+     line-height: 24px;
+     font-size: 20px;
+ }
+ .summarymodal span:before {
+    font-size: 24px;
+    padding-right:20px;
+ }
+ .summarymodal .end .fa:before{
+   color:yellow;
+ }
+ 
+ .wayPoint:before{
+   color: black;
+ }
+ .wayPoint{
+   font-size: 16px !important;
+ }
+ .summarymodal .fa-map-marker:before{
+ 
+   font-size: 28px;
+   padding-right:15px;
+ }
+ .summarymodal .modal-footer{
+   text-align: center;
+ }
+ .summarymodal  .modal-footer button{
+   background : #8bc34a;
+   color: #fff;
+ }
+ .summarymodal .modal-header  button{
+   color:#fff;
+ }
+ 
+ .choose-cars,.booking_form {
+    padding:  20px;
+    background: #fbfbfb;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 20px;
+ }
+ .choose-cars h3,.booking_form h3{
+    margin-top: 0px
+ }
+ .cat-container .input-group {
+    margin-bottom: 20px;
+ }
+ 
+ .cat-container .fa {
+    color: #8bc34a;
+ }
+ 
+ .sec-div {
+    margin-bottom: 0px;
+ }
+ .pay-detail {
+    font-weight: normal;
+    color: #fff;
+    background: #8bc34a;
+    font-size: 16px;
+    width: 24%;
+ }
+ .pay-detail:hover {
+    color: #fff;
+    background: #000;
+    font-weight: bold;
+ }
+ .booking_form .input-group {
+    background: white;
+    border:1px solid #8bc34a;;
+ }
+ .booking_form .input-group-addon{
+     border:0px;
+ }
+
+#floating-panel{
+    display: none !important;
+}
+#right-panel {
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+}
+
+#right-panel select, #right-panel input {
+    font-size: 15px;
+}
+
+#right-panel select {
+    width: 100%;
+}
+
+#right-panel i {
+    font-size: 12px;
+}
+.adp-directions{
+    display: none;
+}
+#map {
+    background: #8bc34a;
+    height: 250px;
+    width: 100%;
+}
+#right-panel {
+    width: 100%;
+    border-width: 2px;
+    min-height: 100px;
+    text-align: left;
+    padding-top: 0;
+}
+.adp-placemark tr{
+    background-color: #979797;
+color: #fff!important;
+}
+table.adp-placemark {
+        height: 43px;
+        box-shadow: 9px 8px 8px #00000069;
+    }
+#directions-panel {
+    margin-top: 10px;
+    background-color: #FFEE77;
+    padding: 10px;
+    overflow: scroll;
+    height: 174px;
+}
+
+.booking_form.summary{
+    background: #464646;
+    color: #fff;
+}
+.adp-summary{
+    font-size: 24px;
+}
+.adp-summary .adp-text,.adp-substep ,.adp-summary span{
+    color: #fff !important;
+}
+img.adp-marker2 {
+    width: 35px;
+    height:30px;
+}
+#floating-panel{
+    top: 54px !important;
+left: 15px!important;
+}
