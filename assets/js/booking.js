@@ -54,6 +54,7 @@ function showsummary() {
         TripCost: fixed_charges * totalDist ,
         TripDuration: totalTime
     };
+    console.log()
     // alert($(".adp-summary span:first-child").html());
     $(".adp-summary").each(function(){
       var getdist = $(this).find('span:first-child').text();
@@ -64,10 +65,11 @@ function showsummary() {
     $('#car_type').text(car_title);
     $('#pickup_time').text();
     $('#totaldistance').text(totalDist );
+    var trip_type = $("input[name='trip_type']:checked"). val();
     $.ajax({
         url:'dashboard/request.php',
         method:'post',
-        data:{requestType:'price_range',totalDistance:Math.floor(totalDist)},
+        data:{requestType:'price_range',totalDistance:Math.floor(totalDist),trip_type:trip_type,form:startsum,to:endsum},
         success:function(res_price){
             fixed_charges = res_price
             totalCost = fixed_charges * totalDist;
