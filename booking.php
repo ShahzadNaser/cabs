@@ -106,10 +106,6 @@
             <input id="usertype" type="hidden" value="<?php echo($user_type) ?>" >
             <div class="booking_form tab-content">
                <h3 style="margin-top: 0;">JOURNEY DETAILS</h3>
-               <ul class="nav nav-tabs  ">
-                 <li class="active"><a data-toggle="tab" href="#custom">Custom Trip</a></li>
-                 <li><a data-toggle="tab" href="#fixed">Fixed Trips</a></li>
-              </ul>
               <div  class="tab-pane fade active in" id="custom">
                <form action="/action_page.php">
                   <div class="form-body">
@@ -165,7 +161,7 @@
                      <br>
                      <div class="form-body">
                         <label class="custom_radio">Fare By Miles 
-                           <input type="radio" checked="checked" value="miles" name="trip_type">
+                           <input type="radio" checked="checked" value="by_miles" name="trip_type">
                            <span class="checkmark"></span>
                         </label>
                         <label class="custom_radio">Fixed Fare
