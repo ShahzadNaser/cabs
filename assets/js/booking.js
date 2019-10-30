@@ -54,7 +54,6 @@ function showsummary() {
         TripCost: fixed_charges * totalDist ,
         TripDuration: totalTime
     };
-    console.log()
     // alert($(".adp-summary span:first-child").html());
     $(".adp-summary").each(function(){
       var getdist = $(this).find('span:first-child').text();
@@ -69,12 +68,21 @@ function showsummary() {
     $.ajax({
         url:'dashboard/request.php',
         method:'post',
-        data:{requestType:'price_range',totalDistance:Math.floor(totalDist),trip_type:trip_type,form:startsum,to:endsum},
+        data:{requestType:'price_range',totalDistance:Math.floor(totalDist),
+            tripType:trip_type,
+            from:startsum,
+            to:endsum,
+            carTitle:car_title
+        },
         success:function(res_price){
-            fixed_charges = res_price
-            totalCost = fixed_charges * totalDist;
-            $('#totalcost').text(totalCost);
-            price_after_discount(totalCost)
+            if(trip_type == "by_miles"){
+                fixed_charges = res_price
+                totalCost = fixed_charges * totalDist;
+                $('#totalcost').text(totalCost);
+                price_after_discount(totalCost)
+            }else{
+                $('#totalcost').text(res_price);
+            }
         }
     })
    
