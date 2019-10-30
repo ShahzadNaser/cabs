@@ -87,7 +87,16 @@ function strip_info($user,$order_id,$amount){
 
 if ($requestType=='price_range' ) {
 	$totalDistance = $_POST['totalDistance'];
-	echo get_val('price_range','price',"where range_start<$totalDistance AND range_end>$totalDistance");
+	if($_POST['tripType'] == "by_miles"){
+		echo get_val('price_range','price',"where range_start<$totalDistance AND range_end>$totalDistance");
+	}else{
+		$car_title = $_POST['carTitle'];
+		$from = $_POST['from'];
+		$to = $_POST['to'];
+		$car_id = get_val('cars','id',"where car_title = '$car_title'");
+		echo get_val('fixedtrips','fixed_price',"where car_id = $car_id AND starting_point = '$from' and ending_point= '$to' and is_active =1");
+	}
+	
 	//echo $totalDistance;
 }
  ?>

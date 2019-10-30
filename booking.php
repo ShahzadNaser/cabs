@@ -106,10 +106,6 @@
             <input id="usertype" type="hidden" value="<?php echo($user_type) ?>" >
             <div class="booking_form tab-content">
                <h3 style="margin-top: 0;">JOURNEY DETAILS</h3>
-               <ul class="nav nav-tabs  ">
-                 <li class="active"><a data-toggle="tab" href="#custom">Custom Trip</a></li>
-                 <li><a data-toggle="tab" href="#fixed">Fixed Trips</a></li>
-              </ul>
               <div  class="tab-pane fade active in" id="custom">
                <form action="/action_page.php">
                   <div class="form-body">
@@ -162,6 +158,17 @@
                         </div>
                         <input id="end" class="form-control  " type="text" placeholder="ENTER PICKUP LOCATION">
                      </div>
+                     <br>
+                     <div class="form-body">
+                        <label class="custom_radio">Fare By Miles 
+                           <input type="radio" checked="checked" value="by_miles" name="trip_type">
+                           <span class="checkmark"></span>
+                        </label>
+                        <label class="custom_radio">Fixed Fare
+                           <input type="radio"  value="fixed" name="trip_type">
+                           <span class="checkmark"></span>
+                        </label>
+                     </div>   
                      <div class="row">
                         <div style="margin:0px 15px 5px 15px;color: #000; ">Enter Journey Time and Date<span id="direction-warrning" class="hidden" style="float: right;margin-top: -11px;color: red;font-size: 10px;padding: 5px 9px;border: 1px solid red;" ></span></div>
                         <div class="col-xs-12 col-md-6">

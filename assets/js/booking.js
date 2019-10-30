@@ -64,15 +64,25 @@ function showsummary() {
     $('#car_type').text(car_title);
     $('#pickup_time').text();
     $('#totaldistance').text(totalDist );
+    var trip_type = $("input[name='trip_type']:checked"). val();
     $.ajax({
         url:'dashboard/request.php',
         method:'post',
-        data:{requestType:'price_range',totalDistance:Math.floor(totalDist)},
+        data:{requestType:'price_range',totalDistance:Math.floor(totalDist),
+            tripType:trip_type,
+            from:startsum,
+            to:endsum,
+            carTitle:car_title
+        },
         success:function(res_price){
-            fixed_charges = res_price
-            totalCost = fixed_charges * totalDist;
-            $('#totalcost').text(totalCost);
-            price_after_discount(totalCost)
+            if(trip_type == "by_miles"){
+                fixed_charges = res_price
+                totalCost = fixed_charges * totalDist;
+                $('#totalcost').text(totalCost);
+                price_after_discount(totalCost)
+            }else{
+                $('#totalcost').text(res_price);
+            }
         }
     })
    
