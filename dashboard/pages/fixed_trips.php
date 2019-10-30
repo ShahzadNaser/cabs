@@ -122,11 +122,11 @@ if(isset($_GET['action']) && $_GET['action']=='add'){
 		  </div>
 		  <div class="form-group">
 		  	<label>Starting Point</label>
-			<input type="text" class="form-control" name="fixed_start" placeholder="Add Starting Point" required/>
+			<input type="text" class="form-control" id="searchMapInput1"  name="fixed_start" placeholder="Add Starting Point" required/>
 		  </div>
 		  <div class="form-group">
 		  	<label>Ending Point</label>		  	
-			<input type="text" class="form-control" name="fixed_end" placeholder="Add Ending Point" />
+			<input type="text" class="form-control" id="searchMapInput2"  name="fixed_end" placeholder="Add Ending Point" />
 		  </div>
 		  <div class="form-group">
 		  	<label>Fixed Price</label>
@@ -197,11 +197,11 @@ if(isset($_GET['action']) && $_GET['action']=='edit'){
 		  </div>
 		  <div class="form-group">
 		  	<label>Starting Point</label>
-			<input type="text" class="form-control" name="fixed_start" value="<?php echo ($starting_point)?>" placeholder="Starting Point" required/>
+			<input type="text" class="form-control" id="searchMapInput3"  name="fixed_start" value="<?php echo ($starting_point)?>" placeholder="Starting Point" required/>
 		  </div>
 		  <div class="form-group">
 		  	<label>Ending Point</label>
-			<input type="text" class="form-control" name="fixed_end" value="<?php echo $ending_point?>" value="<?php echo($ending_point)?>" placeholder="Ending Point" required/>
+			<input type="text" class="form-control" id="searchMapInput4"  name="fixed_end" value="<?php echo $ending_point?>" value="<?php echo($ending_point)?>" placeholder="Ending Point" required/>
 		  </div>
 		  <div class="form-group">
 		  	<label>Select Car</label></br>
@@ -237,3 +237,20 @@ if(isset($_GET['action']) && $_GET['action']=='edit'){
 </div>
 <?php 
 }?>
+<script>
+function initMap() {
+	var input1 = document.getElementById('searchMapInput1');
+	var autocomplete1 = new google.maps.places.Autocomplete(input1);
+	
+	var input2 = document.getElementById('searchMapInput2');
+	var autocomplete2 = new google.maps.places.Autocomplete(input2);
+	
+	var input3 = document.getElementById('searchMapInput3');
+	var autocomplete3 = new google.maps.places.Autocomplete(input3);
+	
+	var input4 = document.getElementById('searchMapInput4');
+	var autocomplete4 = new google.maps.places.Autocomplete(input4);
+
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqksn9fLxjZSlby8VoGJVesz2szNlbMB4&libraries=places&callback=initMap" async defer></script>
