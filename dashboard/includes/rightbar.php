@@ -5,7 +5,12 @@
 			if(isset($_GET['p'])){
 				$page= $_GET['p'];
 			}else{
-				$page = 'profile';
+				if($user_type=='admin'){
+					$page = 'dashboard';
+				}else{
+					$page = 'profile';
+				}
+
 			}
 			include('pages/'.$page.'.php');
 		?>
