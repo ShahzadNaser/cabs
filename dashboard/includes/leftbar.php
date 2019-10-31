@@ -2,6 +2,13 @@
 		<span class="heading"></span>
 		<ul>
 			<li><a href="../" class=""><i class="fa fa-home"></i> Home</a></li>
+			<?php
+			if($user_type=='admin'){
+			?>
+			<li><a href="index.php?p=dashboard" class="<?php if(isset($_GET['p']) && $_GET['p']=='dashboard'){echo 'active';}?>"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a></li>
+			<?php 
+				}
+			?>
 			<li><a href="index.php?p=profile" class="<?php if(isset($_GET['p']) && $_GET['p']=='profile'){echo 'active';}?>"><i class="fa fa-user"></i> Profile</a></li>
 			<?php
 			if($user_type=='user'){
